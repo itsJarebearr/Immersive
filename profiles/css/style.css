@@ -24,7 +24,7 @@ body {
 }
 
 #container {
-    padding: 1em;
+    padding: 2em;
 }
 
 /* Typography */
@@ -35,7 +35,6 @@ header, h1 {
 }
 
 h1 {
-    padding: 0.5em;
 }
 
 h1.major {
@@ -46,128 +45,61 @@ h1.major {
 }
 
 h2 {
-    margin: 0.5em 0;
+    margin: 1em auto;
+    align-items: center;
+    text-align: center;
 }
 
 /* Image styling */
 img {
-    width: 100%;
-    height: auto;
+    width: 400px;
+    max-width:100%;
     display: block;
     border-radius: 8px;
+    margin:auto;
 }
 
 /* Student card styling */
 #student1, #student2, #student3 {
     background: #ffffff;
     border-radius: 10px;
-    padding: 1em;
+    padding:1em;
     margin: 1em auto;
-    max-width: 300px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    flex-direction: column; /* Stacks profile cards*/
+    text-decoration: none;
+    text-align: center;
+    max-width:400px;
+
 }
 
-/* Button styling */
-button.revealVideoBtn {
-    background: #00874f;
-    color: white;
-    padding: 0.75em 1.5em;
-    font-size: 1em;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    margin-top: 1em;
-    transition: transform 0.2s, background 0.2s;
+figcaption{
+    /*outline: solid blue;*/
+    max-width: auto;
+    margin: 0 auto;
+    max-width:100%;
+    width:300px;
+    background: yellow;
 }
 
-button.revealVideoBtn:hover {
-    background: #00653b;
+
+.card-link{
+    text-decoration: none;
+    display:block;
+    color:#000;
+}
+
+.card-link:hover #student1{
     transform: scale(1.05);
+    background: grey;
 }
 
-/* Video */
-.video-wrapper {
-    margin-top: 2em;
-    text-align: center;
+.card-link:hover #student2{
+    transform: scale(1.05);
+    background: grey;
 }
 
-.video-container {
-    position: relative;
-    padding-bottom: 56.25%;
-    height: 0;
-    overflow: hidden;
-    margin: 1em auto;
-    max-width: 100%;
-}
-
-.video-container iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-
-/* Figure styling */
-figure {
-    text-align: center;
-    margin: 0;
-}
-
-figcaption {
-    margin-top: 1em;
-    background: #ECFAFE;
-    padding: 0.75em;
-    border-radius: 8px;
-}
-
-/* Modal overlay */
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 1000;
-    left: 0; top: 0;
-    width: 100%; height: 100%;
-    background-color: rgba(0,0,0,0.8);
-    justify-content: center;
-    align-items: center;
-}
-
-/* Modal content box */
-.modal-content {
-    position: relative;
-    background: #fff;
-    padding: 1em;
-    border-radius: 10px;
-    max-width: 90%;
-    width: 640px;
-    box-shadow: 0 0 20px rgba(0,0,0,0.5);
-}
-
-/* Close button */
-.closeBtn {
-    position: absolute;
-    top: 10px;
-    right: 15px;
-    color: #000;
-    font-size: 1.5em;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-/* Reuse existing video-container */
-#modalVideoContainer {
-    padding-bottom: 56.25%;
-    height: 0;
-    position: relative;
-}
-
-#modalVideoContainer iframe {
-    position: absolute;
-    top: 0; left: 0;
-    width: 100%;
-    height: 100%;
+.card-link:hover #student3{
+    transform: scale(1.05);
+    background: grey;
 }
 
 
@@ -177,41 +109,37 @@ figcaption {
 
 /* Laptop (min 769px) */
 @media all and (min-width: 769px) {
-    
-
-    
     main {
         display: flex;
-        justify-content: space-between;
+        justify-content: space-evenly;
         gap: 2em;
         flex-wrap: nowrap;
         align-items: stretch;
-        padding: 0 1em;
     }
 
     #student1, #student2, #student3 {
-        flex: 0 0 42%;
+        flex: 1 1 1 50%;
         max-width: 400px;
-        padding: 1.5em;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 600px;
+        max-height: 100%;
+        padding-bottom: 40px;
     }
-
-    figcaption {
-        max-height: 150px;
-        overflow-y: auto;
-    }
-
-    /*.video-container {
-        transform: scale(1.1);
-        transform-origin: center;
-    }*/
     
-    #modalVideoContainer {
-        width: 100%;
-        max-width:540px;
-        max-height:315px;
-        height: 100%
-        padding: 2em;
-  }
+    figcaption{
+        max-width:100%;
+        max-height: 100%;
+        height: 140px;
+        overflow-y: auto;
+        margin: auto;
+        width: 500px;
+        background:#cff3fa;
+        padding: 0 auto;
+}
+
+
 }
 
 
@@ -219,26 +147,17 @@ figcaption {
 @media all and (min-width: 1024px) {
     main {
         display: flex;
-        justify-content: space-between;
+        justify-content: space-evenly;
         align-items: stretch;
     }
 
     #student1, #student2, #student3 {
         flex: 1 1 30%;
-        max-width: 600px;
+        max-width: 400px;
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
+        justify-content: space-evenly;
+        gap: 20px;
     }
 
-    figcaption {
-        max-height: 200px;
-        overflow-y: auto;
-    }
 
-    /*.video-container {
-        max-width: 400px;
-        margin: 2em auto;
-        transform: scale(1.1);
-    }*/
-}
