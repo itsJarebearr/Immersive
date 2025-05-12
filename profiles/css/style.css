@@ -23,10 +23,13 @@ body {
     to { opacity: 1; }
 }
 
-#container,{
-    max-width:100%;
-    width: 400px;
-    margin: auto;
+#container{
+    width:100%;
+
+}
+
+main{
+
 }
 
 /* Typography */
@@ -162,5 +165,4 @@ figcaption{
         justify-content: space-evenly;
         gap: 20px;
     }
-
 
