@@ -110,6 +110,10 @@ figcaption{
     background: grey;
 }
 
+footer{
+    padding:1em;
+    margin:auto;
+}
 
 /* ============================
    MEDIA QUERIES
