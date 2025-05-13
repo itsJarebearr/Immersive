@@ -73,7 +73,7 @@ img {
 #student1, #student2, #student3 {
     background: #ffffff;
     border-radius: 10px;
-    margin: auto;
+    margin: 1em auto;
     text-decoration: none;
     text-align: center;
     max-width:400px;
