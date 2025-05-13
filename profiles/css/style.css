@@ -25,6 +25,8 @@ body {
 
 #container{
     width:100%;
+    padding:1em;
+    margin: auto;
 }
 
 main{
@@ -73,6 +75,7 @@ img {
     text-decoration: none;
     text-align: center;
     max-width:400px;
+    padding:1em;
 
 }
 
