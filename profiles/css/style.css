@@ -14,7 +14,6 @@ body {
     background: #048194;
     opacity: 0;
     animation: fadeIn 1000ms ease forwards;
-    animation-delay: 0.1s;
     font-family: "Libre Franklin", sans-serif;
 }
 
@@ -25,16 +24,7 @@ body {
 }
 
 #container {
-    width: 100%;
-    padding: 0;
-    margin: 0 auto;
-}
-
-main {
-    width: 100%;
-    max-width: 400px;
-    display: block;
-    margin: 0 auto;
+    padding: 2em;
 }
 
 /* Typography */
@@ -42,59 +32,38 @@ header, h1 {
     color: white;
     text-align: center;
     font-weight: normal;
-    margin: 20px 20px auto;
 }
 
 h1 {
+    padding: 0.5em;
 }
 
 h1.major {
     color: black;
     font-size: 1.5em;
     font-weight: bold;
-    padding: 1em;
-    margin: 0;
+    padding: 0;
 }
 
 h2 {
-    margin: 1em auto;
-    align-items: center;
-    text-align: center;
+    margin: 0.5em 0;
 }
 
 /* Image styling */
 img {
-    width: 400px;
-    max-width: 100%;
+    width: 100%;
+    height: auto;
     display: block;
     border-radius: 8px;
-    margin: auto;
 }
 
 /* Student card styling */
 #student1, #student2, #student3 {
     background: #ffffff;
     border-radius: 10px;
-    margin: 2em auto;
-    text-decoration: none;
-    text-align: center;
-    max-width: 400px;
     padding: 1em;
-    height:auto;
-}
-
-figcaption {
-    max-width: 100%;
-    margin: 0 auto;
-    width: 300px;
-    background: #cff3fa;
-    height:auto;
-}
-
-.card-link {
-    text-decoration: none;
-    display: block;
-    color: #000;
+    margin: 1em auto;
+    max-width: 500px;
 }
 
 #student1:hover,
@@ -104,10 +73,25 @@ figcaption {
     background: grey;
 }
 
-footer {
-    padding: 1em;
-    margin: auto;
+.card-link {
+    text-decoration: none;
+    display: block;
+    color: #000;
 }
+
+/* Figure styling */
+figure {
+    text-align: center;
+    margin: 0;
+}
+
+figcaption {
+    margin-top: 1em;
+    background: #ECFAFE;
+    padding: 0.75em;
+    border-radius: 8px;
+}
+
 
 /* ============================
    MEDIA QUERIES
@@ -117,60 +101,55 @@ footer {
 @media all and (min-width: 769px) {
     main {
         display: flex;
-        justify-content: space-evenly;
+        justify-content: space-between;
         gap: 2em;
         flex-wrap: nowrap;
         align-items: stretch;
-        max-width: 100%;
+        padding:20px;
     }
 
     #student1, #student2, #student3 {
-        flex: 1 1 50%; 
-        max-width: 400px;
+        flex: 1;
+        max-width: none;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        height: 650px;
-        padding-bottom: 40px;
+        padding:2em;
     }
 
-    figcaption {
-        max-width: 100%;
-        max-height: 100%;
-        height: 180px;
-        overflow-y: auto;
-        margin: auto;
-        width: 500px;
-        padding: 0; 
-    }
 }
+
 
 /* Desktop (min 1024px) */
 @media all and (min-width: 1024px) {
     main {
         display: flex;
-        justify-content: space-evenly;
+        justify-content: space-between;
         align-items: stretch;
     }
 
     #student1, #student2, #student3 {
         flex: 1 1 30%;
-        width: 700px;
+        max-width: 600px;
         display: flex;
         flex-direction: column;
-        justify-content: space-evenly;
-        gap: 20px;
-        height:1000px;
+        justify-content: space-between;
     }
+
+    figcaption {
+        max-height: 200px;
+        overflow-y: auto;
+    }
+
 }
 
-figcaption{
-    height:300px;
-}
+/*Desktop 1440p*/
 
-/*Large Desktop (min 1440px)*/
 @media all and (min-width: 1440px){
-    #student1,#student2,#student3{
-        max-width: 800px;
+
+       figcaption {
+        max-height: 150px;
+        overflow-y: auto;
     }
+    
 }
