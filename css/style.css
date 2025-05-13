@@ -55,7 +55,7 @@ h2{
 
 h3{
 	font-family:"Libre Franklin", cursive, sans-serif;
-	font-size: 20px;
+	font-size: 12px;
 }
 
 nav ul{
@@ -109,6 +109,10 @@ You can adjust the min-width numbers below, and add as many new media queries as
 @media (min-width: 1024px) {
     h1 {
         font-size: 100px;
+    }
+
+   h3{
+        font-size:16px;
     }
 }
 
